@@ -9,3 +9,6 @@ CocosCreator 打字机
 - 提供打字进度回调事件  
 - 提供打字结束回调事件  
 
+--- 
+
+![img](https://gitee.com/568071718/yx-printer/raw/main/doc-resources/imgs/example.gif)
