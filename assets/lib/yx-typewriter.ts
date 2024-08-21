@@ -21,6 +21,15 @@ class _yx_printer_label_content_scrollView extends ScrollView {
 }
 
 /**
+ * 修复富文本内容包含标签时换行异常的问题  
+ */
+class _yx_printer_label extends RichText {
+    protected splitLongStringOver2048 (text: string, styleIndex: number): string[] {
+        return [text]
+    }
+}
+
+/**
  * 基于 YXPrinter 和 RichText 实现一个文本打字机
  */
 @ccclass('YXTypewriter')
@@ -85,7 +94,7 @@ export class YXTypewriter extends Component {
             result.parent = content
             result.layer = result.parent.layer
 
-            let richText = result.addComponent(RichText)
+            let richText = result.addComponent(_yx_printer_label)
             richText.lineHeight = 50
             richText.horizontalAlign = HorizontalTextAlignment.LEFT
             richText.verticalAlign = VerticalTextAlignment.CENTER
@@ -100,7 +109,7 @@ export class YXTypewriter extends Component {
             resultWidget.top = 0
             resultWidget.updateAlignment()
         }
-        return result.getComponent(RichText)
+        return result.getComponent(_yx_printer_label)
     }
 
     /**
