@@ -1,6 +1,11 @@
 
 CocosCreator 打字机  
 
+---  
+
+* [Github](https://github.com/568071718/yx-printer)    
+* [Gitee](https://gitee.com/568071718/yx-printer)  
+
 ## 功能特点  
 
 - 支持调整打字速度  
@@ -11,4 +16,4 @@ CocosCreator 打字机
 
 --- 
 
-![img](https://gitee.com/568071718/yx-printer/raw/main/doc-resources/imgs/example.gif)
+![img](./doc-resources/imgs/example.gif)
